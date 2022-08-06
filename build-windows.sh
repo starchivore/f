@@ -7,10 +7,7 @@ BASE_DIR=$(pwd)
 
 source common.sh
 
-if [ ! -e $FFMPEG_TARBALL ]
-then
-	curl -s -L -O $FFMPEG_TARBALL_URL
-fi
+curl -s -L -o $FFMPEG_TARBALL $FFMPEG_TARBALL_URL
 
 : ${ARCH?}
 

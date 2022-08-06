@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-FFMPEG_VERSION=4.4.1
-FFMPEG_TARBALL=ffmpeg-$FFMPEG_VERSION.tar.bz2
-FFMPEG_TARBALL_URL=http://ffmpeg.org/releases/$FFMPEG_TARBALL
+FFMPEG_VERSION=4.4
+FFMPEG_TARBALL=ffmpeg.tar.gz
+FFMPEG_TARBALL_URL=https://github.com/ffmpeg/ffmpeg/tarball/release/$FFMPEG_VERSION
 
 FFMPEG_CONFIGURE_FLAGS=(
     --disable-shared
