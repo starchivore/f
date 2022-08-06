@@ -46,7 +46,7 @@ jobs:
           install: git mingw-w64-x86_64-toolchain mingw-w64-cross-toolchain mingw-w64-x86_64-gnutls libgnutls libgnutls-devel gnutls base-devel yasm 
       - name: Build
         shell: msys2 {0}
-        run: ./build-windows.sh
+        run: PATH=$PATH:/opt/bin ./build-windows.sh
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
