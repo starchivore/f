@@ -39,8 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
-        run: choco install -dfvy yasm
-      - uses: msys2/setup-msys2@v2
+        uses: msys2/setup-msys2@v2
         with:
           msystem: MINGW64
           update: true
