@@ -43,7 +43,7 @@ jobs:
         with:
           msystem: MINGW64
           update: true
-          install: git mingw-w64-x86_64-cc mingw-w64-x86_64-gnutls base-devel yasm mingw-w64-cross-binutils
+          install: git mingw-w64-x86_64-gcc mingw-w64-x86_64-gnutls base-devel yasm mingw-w64-cross-binutils
       - name: Build
         shell: msys2 {0}
         run: ./build-windows.sh
