@@ -51,6 +51,8 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-protocols
     --enable-protocol=file
     --enable-protocol=pipe
+    --enable-protocol=http
+	--enable-protocol=https
 
     --enable-demuxer=image2
     --enable-demuxer=aac
