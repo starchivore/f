@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y && \
-          sudo apt-get install -y yasm libgnutls28-dev
+          sudo apt-get install -y yasm libssl-dev
       - name: Build
         run: ./build-linux.sh
       - name: Archive production artifacts
@@ -43,7 +43,7 @@ jobs:
         with:
           msystem: MINGW64
           update: true
-          install: git mingw-w64-x86_64-toolchain mingw-w64-cross-toolchain mingw-w64-x86_64-gnutls libgnutls libgnutls-devel gnutls base-devel yasm 
+          install: git mingw-w64-x86_64-toolchain mingw-w64-cross-toolchain mingw-w64-x86_64-openssl openssl-devel base-devel yasm 
       - name: Build
         shell: msys2 {0}
         run: PATH=$PATH:/opt/bin ./build-windows.sh
