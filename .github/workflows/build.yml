@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y && \
-          sudo apt-get install -y yasm
+          sudo apt-get install -y yasm libgnutls28-dev
       - name: Build
         run: ./build-linux.sh
       - name: Archive production artifacts
@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y && \
-          sudo apt-get install -y yasm mingw-w64
+          sudo apt-get install -y yasm mingw-w64 libgnutls28-dev
       - name: Build
         run: ./build-windows.sh
       - name: Archive production artifacts
