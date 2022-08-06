@@ -8,9 +8,6 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-shared
     --enable-static
     --enable-pic
-    
-    --enable-nonfree
-    --enable-gnutls
 
     --disable-doc
     --disable-debug
@@ -52,7 +49,7 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-protocol=file
     --enable-protocol=pipe
     --enable-protocol=http
-	--enable-protocol=https
+    --enable-protocol=https
 
     --enable-demuxer=image2
     --enable-demuxer=aac
@@ -184,4 +181,6 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-parser=mpegaudio
     --enable-parser=tak
     --enable-parser=vorbis
+    
+    --enable-openssl
 )
