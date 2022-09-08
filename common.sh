@@ -25,5 +25,5 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-demuxers
     --enable-demuxer='*sub*,*ac3,*ac,*peg*,*web*,ape,ass,avi,concat,dnxhd,dts*,*dash*,*flv,gif,hls,h264,hevc,kux,xv,matroska,mlv,mov,mp3,mxf,nsv,nut,ogg,pcm*,rawvideo,rt*p,spdif,srt,vc1,v210*,wav,*pipe,image2'
     --disable-parsers
-    --enable-parser='*sub*,aac*,ac3,cook,dnxhd,flac,h26[3-4],hevc,m*,opus,rv*,vc1,vorbis,vp[8-9]'
+    --enable-parser='aac,aac_latm,ac3,cook,dca,flac,gsm,mpegaudio,tak,vorbis'
 )
