@@ -11,7 +11,6 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-ffmpeg
     --disable-ffplay
     --enable-runtime-cpudetect
-    --enable-libmfx
     --disable-ptx-compression
     --enable-mediafoundation
     --disable-vulkan
