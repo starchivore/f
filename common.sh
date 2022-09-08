@@ -10,6 +10,9 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-shared
     --enable-ffmpeg
     --disable-ffplay
+    --disable-protocols
+    --enable-protocol=file
+    --enable-protocol=pipe
     --enable-mediafoundation
     --disable-vulkan
     --disable-postproc
@@ -33,7 +36,5 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-parsers
     --enable-parser='aac,aac_latm,ac3,cook,dca,flac,gsm,mpegaudio,tak,vorbis'
     --disable-encoders
-    --enable-encoder='aac,dnxhd,exr,ff*,*yuv*,gif,h26[3-4]*,hevc*,mjpeg,*png,opus,pcm*,prores*,rawvideo,spdif,speedhq,*jpeg,*png,tiff,vp[7-9],wrapped_avframe,nvenc*,vorbis'
     --disable-muxers
-    --enable-muxer='*jpeg,dnxhd,fifo,flv,gif,hls,h264,hevc,image2,mov,mp4,mpegts,matroska,null,og*,pcm*,rawvideo,spdif,*pipe,*segment,webm,wav,dash,nu*'
 )
