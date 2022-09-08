@@ -26,4 +26,8 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-demuxer='*sub*,*ac3,*ac,*peg*,*web*,ape,ass,avi,concat,dnxhd,dts*,*dash*,*flv,gif,hls,h264,hevc,kux,xv,matroska,mlv,mov,mp3,mxf,nsv,nut,ogg,pcm*,rawvideo,rt*p,spdif,srt,vc1,v210*,wav,*pipe,image2'
     --disable-parsers
     --enable-parser='*sub*,aac*,ac3,cook,dnxhd,flac,h26[3-4],hevc,m*,opus,rv*,vc1,vorbis,vp[8-9]'
+    --disable-encoders
+    --enable-encoder='aac,dnxhd,exr,ff*,*yuv*,gif,h26[3-4]*,hevc*,mjpeg,*png,opus,pcm*,prores*,rawvideo,spdif,speedhq,*jpeg,*png,tiff,vp[7-9],wrapped_avframe,nvenc*,vorbis'
+    --disable-muxers
+    --enable-muxer='*jpeg,dnxhd,fifo,flv,gif,hls,h264,hevc,image2,mov,mp4,mpegts,matroska,null,og*,pcm*,rawvideo,spdif,*pipe,*segment,webm,wav,dash,nu*'
 )
