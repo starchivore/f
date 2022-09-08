@@ -17,4 +17,7 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-postproc
     --enable-pic
     --disable-filter=scale_cuda
+    --disable-outdevs
+    --disable-muxers
+    --disable-encoders
 )
