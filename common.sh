@@ -15,6 +15,17 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-mediafoundation
     --disable-vulkan
     --disable-postproc
+    --disable-swscale
+    --disable-programs
+    --disable-network
+    --disable-zlib
+    --disable-bzlib
+    --disable-iconv
+    --disable-bsfs
+    --disable-hwaccels
+    --disable-nvenc
+    --disable-videotoolbox
+    --disable-audiotoolbox
     --enable-pic
     --disable-filter=scale_cuda
     --enable-small
