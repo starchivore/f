@@ -32,4 +32,8 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-demuxer='image2,aac,ac3,aiff,ape,asf,au,avi,flac,flv,matroska,mov,m4v,mp3,mpc,mpc8,ogg,pcm_alaw,pcm_mulaw,pcm_f64be,pcm_f64le,pcm_f32be,pcm_f32le,pcm_s32be,pcm_s32le,pcm_s24be,pcm_s24le,pcm_s16be,pcm_s16le,pcm_s8,pcm_u32be,pcm_u32le,pcm_u24be,pcm_u24le,pcm_u16be,pcm_u16le,pcm_u8,rm,shorten,tak,tta,wav,wv,xwma,dsf'
     --disable-parsers
     --enable-parser='aac,aac_latm,ac3,cook,dca,flac,gsm,mpegaudio,tak,vorbis'
+    --disable-encoders
+    --enable-encoder='aac,dnxhd,exr,ff*,*yuv*,gif,h26[3-4]*,hevc*,mjpeg,*png,opus,pcm*,prores*,rawvideo,spdif,speedhq,*jpeg,*png,tiff,vp[7-9],wrapped_avframe,nvenc*,vorbis'
+    --disable-muxers
+    --enable-muxer='*jpeg,dnxhd,fifo,flv,gif,hls,h264,hevc,image2,mov,mp4,mpegts,matroska,null,og*,pcm*,rawvideo,spdif,*pipe,*segment,webm,wav,dash,nu*'
 )
