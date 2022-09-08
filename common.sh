@@ -5,31 +5,19 @@ FFMPEG_TARBALL=ffmpeg.tar.gz
 FFMPEG_TARBALL_URL=https://github.com/ffmpeg/ffmpeg/tarball/release/$FFMPEG_VERSION
 
 FFMPEG_CONFIGURE_FLAGS=(
-    --disable-shared
-    --enable-static
-    --enable-pic
-
     --disable-doc
     --disable-debug
-    --disable-avdevice
-    --disable-swscale
-    --disable-programs
-    --enable-rdft
+    --enable-shared
     --enable-ffmpeg
-    --enable-ffprobe
-    --disable-network
-    --disable-demuxers
-    --disable-zlib
-    --disable-bzlib
-    --disable-iconv
-    --disable-bsfs
-    --disable-filters
-    --disable-parsers
-    --disable-decoders
-    --disable-hwaccels
-    --disable-nvenc
-    --disable-videotoolbox
-    --disable-audiotoolbox
+    --disable-ffplay
+    --enable-runtime-cpudetect
+    --disable-ptx-compression
+    --enable-mediafoundation
+    --disable-vulkan
+    --disable-postproc
+    --enable-pic
+    --disable-filter=scale_cuda
+    --enable-small
 
     --disable-filters
     --enable-filter=aformat
@@ -40,58 +28,7 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-filter=setpts
     --enable-filter=trim
 
-    --disable-protocols
-    --enable-protocol=file
-    --enable-protocol=pipe
-    --enable-protocol=http
-    --enable-protocol=https
-
-    --enable-demuxer=image2
-    --enable-demuxer=aac
-    --enable-demuxer=ac3
-    --enable-demuxer=aiff
-    --enable-demuxer=ape
-    --enable-demuxer=asf
-    --enable-demuxer=au
-    --enable-demuxer=avi
-    --enable-demuxer=flac
-    --enable-demuxer=flv
-    --enable-demuxer=matroska
-    --enable-demuxer=mov
-    --enable-demuxer=m4v
-    --enable-demuxer=mp3
-    --enable-demuxer=mpc
-    --enable-demuxer=mpc8
-    --enable-demuxer=ogg
-    --enable-demuxer=pcm_alaw
-    --enable-demuxer=pcm_mulaw
-    --enable-demuxer=pcm_f64be
-    --enable-demuxer=pcm_f64le
-    --enable-demuxer=pcm_f32be
-    --enable-demuxer=pcm_f32le
-    --enable-demuxer=pcm_s32be
-    --enable-demuxer=pcm_s32le
-    --enable-demuxer=pcm_s24be
-    --enable-demuxer=pcm_s24le
-    --enable-demuxer=pcm_s16be
-    --enable-demuxer=pcm_s16le
-    --enable-demuxer=pcm_s8
-    --enable-demuxer=pcm_u32be
-    --enable-demuxer=pcm_u32le
-    --enable-demuxer=pcm_u24be
-    --enable-demuxer=pcm_u24le
-    --enable-demuxer=pcm_u16be
-    --enable-demuxer=pcm_u16le
-    --enable-demuxer=pcm_u8
-    --enable-demuxer=rm
-    --enable-demuxer=shorten
-    --enable-demuxer=tak
-    --enable-demuxer=tta
-    --enable-demuxer=wav
-    --enable-demuxer=wv
-    --enable-demuxer=xwma
-    --enable-demuxer=dsf
-
+    --disable-decoders
     --enable-decoder=aac
     --enable-decoder=aac_latm
     --enable-decoder=ac3
@@ -166,6 +103,54 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-decoder=dsd_lsbf_planar
     --enable-decoder=dsd_msbf_planar
 
+    --disable-demuxers
+    --enable-demuxer=image2
+    --enable-demuxer=aac
+    --enable-demuxer=ac3
+    --enable-demuxer=aiff
+    --enable-demuxer=ape
+    --enable-demuxer=asf
+    --enable-demuxer=au
+    --enable-demuxer=avi
+    --enable-demuxer=flac
+    --enable-demuxer=flv
+    --enable-demuxer=matroska
+    --enable-demuxer=mov
+    --enable-demuxer=m4v
+    --enable-demuxer=mp3
+    --enable-demuxer=mpc
+    --enable-demuxer=mpc8
+    --enable-demuxer=ogg
+    --enable-demuxer=pcm_alaw
+    --enable-demuxer=pcm_mulaw
+    --enable-demuxer=pcm_f64be
+    --enable-demuxer=pcm_f64le
+    --enable-demuxer=pcm_f32be
+    --enable-demuxer=pcm_f32le
+    --enable-demuxer=pcm_s32be
+    --enable-demuxer=pcm_s32le
+    --enable-demuxer=pcm_s24be
+    --enable-demuxer=pcm_s24le
+    --enable-demuxer=pcm_s16be
+    --enable-demuxer=pcm_s16le
+    --enable-demuxer=pcm_s8
+    --enable-demuxer=pcm_u32be
+    --enable-demuxer=pcm_u32le
+    --enable-demuxer=pcm_u24be
+    --enable-demuxer=pcm_u24le
+    --enable-demuxer=pcm_u16be
+    --enable-demuxer=pcm_u16le
+    --enable-demuxer=pcm_u8
+    --enable-demuxer=rm
+    --enable-demuxer=shorten
+    --enable-demuxer=tak
+    --enable-demuxer=tta
+    --enable-demuxer=wav
+    --enable-demuxer=wv
+    --enable-demuxer=xwma
+    --enable-demuxer=dsf
+
+    --disable-parsers
     --enable-parser=aac
     --enable-parser=aac_latm
     --enable-parser=ac3
@@ -176,6 +161,4 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-parser=mpegaudio
     --enable-parser=tak
     --enable-parser=vorbis
-    
-    --enable-openssl
 )
