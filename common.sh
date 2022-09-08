@@ -13,7 +13,7 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-avdevice
     --disable-swscale
     --disable-postproc
-    --disable-ffmpeg
+    --enable-ffmpeg
     --disable-ffplay
 
     --disable-iconv
