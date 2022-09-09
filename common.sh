@@ -17,7 +17,6 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-mediafoundation
     --disable-vulkan
     --disable-postproc
-    --disable-swresample
     --disable-swscale
     --disable-network
     --disable-zlib
