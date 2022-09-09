@@ -11,6 +11,9 @@ FFMPEG_CONFIGURE_FLAGS=(
     --enable-static
     --enable-ffmpeg
     --disable-ffplay
+    --disable-indevs
+    --disable-outdevs
+    --disable-avdevice
     --disable-protocols
     --enable-protocol=file
     --enable-protocol=pipe
@@ -26,7 +29,6 @@ FFMPEG_CONFIGURE_FLAGS=(
     --disable-hwaccels
     --disable-nvenc
     --disable-videotoolbox
-    --disable-audiotoolbox
     --enable-pic
     --disable-filters
     --enable-filter='*null*,*fifo,*format,*resample'
